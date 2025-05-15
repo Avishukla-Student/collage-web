@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Slideshow and Courses</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 30s linear infinite;
+      font-size: 18px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <!-- Logo and College Info -->
+    <div class="logo-container">
+      <img src="asset/image/Logo-2 (1).png" alt="Logo">
+      <div class="college-info">
+        <h1 class="college-name">Swami Sukhdevanand College</h1>
+        <div class="college-location">Shahjahanpur, Uttar Pradesh</div>
+      </div>
+    </div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776;
+    </div>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li class="close-btn" onclick="toggleMenu()">&#10005;</li> <!-- Close Button -->
+      <li><a href="#">About</a></li>
+      <li><a href="facalty.html">Faculty</a></li>
+      <li><a href="gallary.html">Gallery</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><button class="login-btn" onclick="window.location.href='reg.html'">Faculty Login</button></li>
+      <li><button class="login-btn" onclick="window.location.href='reg.html'">Student Login</button></li>
+    </ul>
+  </nav>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slides">
+      <img src="asset/image/NEW-CLG.jpg" alt="Slide 1">
+    </div>
+    <div class="slides">
+      <img src="asset/image/Screenshot 2024-04-04 144716.png" alt="Slide 2">
+    </div>
+    <div class="slides">
+      <img src="Assest/Images/library-image.jpeg" alt="Slide 3">
+    </div>
+
+
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+  <!-- Notice Para -->
+  <div class="notice marquee">
+    <span behavior="scroll" direction="left" scrollamount="10">Welcome to Swami Sukhdevanand College, Shahjahanpur. We
+      are committed to providing quality education and fostering a vibrant learning environment.</span>
+  </div>
+  <div class="two-section">    <!-- Notice Board Section -->
+    <div class="notice-board-section">
+      <h2>Notice Board</h2>
+      <ul class="notice-list">
+        <li><a href="#" target="_blank">Admission Open for 2025-26</a></li>
+        <li><a href="#" target="_blank">Upcoming Seminar on AI and Machine Learning</a></li>
+        <li><a href="#" target="_blank">Examination Schedule for Even Semester </a></li>
+        <li><a href="#" target="_blank">Holiday Notice for Upcoming Festival</a></li>
+      </ul>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="courses-section">
+      <h2>Our Courses</h2>
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="course-card">
+          <img src="asset/image/bca.jpeg" alt="BCA">
+          <h3>BCA</h3>
+          <p class="course-details" style="display: none;">BCA (Bachelor of Computer Applications) is a 3-year
+            undergraduate program focusing on computer programming, software development, and IT fundamentals.</p>
+          <button class="details-btn" onclick="toggleDetails(this)">More Details</button>
+          <a href="Assest/Pdfs/BCA_SYLLABUS-1-Year.pdf" class="syllabus-btn" download>Download Syllabus</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="course-card">
+          <img src="asset/image/pgdca.jpeg" alt="PGDCA">
+          <h3>PGDCA</h3>
+          <p class="course-details" style="display: none;">PGDCA (Post Graduate Diploma in Computer Applications) is a
+            1-year program designed to provide advanced knowledge in computer applications and IT.</p>
+          <button class="details-btn" onclick="toggleDetails(this)">More Details</button>
+          <a href="Assest/Pdfs/PGDCA.pdf" class="syllabus-btn" download>Download Syllabus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Faculty Section -->
+  <div class="faculty-section" id="faculty">
+    <h2>Our Faculty</h2>
+    <div class="faculty-container">
+      <!-- Faculty Card 1 -->
+      <div class="faculty-card">
+        <img src="asset/facaltyimages/Sandeep Kumar Awasthi.jpg" alt="Faculty 1">
+        <h3>Sandeep Kumar Awasthi (HOD)</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <!-- Faculty Card 2 -->
+      <div class="faculty-card">
+        <img src="asset/facaltyimages/Rajat .jpg" alt="Faculty 2">
+        <h3>Rajat Singh</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <!-- Faculty Card 3 -->
+      <div class="faculty-card">
+        <img src="asset/facaltyimages/rajesh saxena.jpg" alt="Faculty 3">
+        <h3>Rajesh Saxena</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <!-- Hidden Faculty Cards -->
+      <div class="faculty-card hidden">
+        <img src="asset/facaltyimages/Umesh Singh Visen.jpeg" alt="Faculty 4">
+        <h3>Umesh Singh Visen</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card hidden">
+        <img src="asset/facaltyimages/Sumit Trivedi.jpeg" alt="Faculty 5">
+        <h3>Sumit Trivedi</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card hidden">
+        <img src="asset/facaltyimages/Anamika Shukla.jpeg" alt="Faculty 6">
+        <h3>Anamika Shukla</h3>
+        <p>Assistant Professor</p>
+      </div>
+    </div>
+    <!-- View More Button -->
+    <button class="view-more-btn" onclick="showMoreFaculty()">View More</button>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Address:</strong></p>
+        <p>SSPG College</p>
+        <p>Mumukshu Ashram</p>
+        <p>Shahjahanpur - 242 226</p>
+        <p>Uttar Pradesh, India</p>
+        <p><strong>Phone:</strong></p>
+        <p>9452676173 (Control Room)</p>
+        <p>9839903505 (UPRTOU - Uttar Pradesh Rajarshi Tandon Open University)</p>
+        <p>9935126543 (IGNOU - Indira Gandhi National Open University)</p>
+        <p><strong>Time:</strong> 11:00 am to 03:00 pm</p>
+        <p><strong>Email:</strong> <a href="mailto:sspgspncollege@gmail.com">sspgspncollege@gmail.com</a></p>
+        <p><strong>Official Website:</strong> <a href="http://www.sscollegespn.org"
+            target="_blank">http://www.sscollegespn.org</a></p>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Swami Sukhdevanand College. All rights reserved.</p>
+      <p>Contact: +91 9452676173 | Email: <a href="mailto:sspgspncollege@gmail.com">sspgspncollege@gmail.com</a></p>
+      <p>Address: Mumukshu Ashram, Shahjahanpur, Uttar Pradesh, India</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
