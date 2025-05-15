@@ -1,0 +1,40 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        ul.services-list {
+            list-style: none;
+            padding: 0;
+        }
+        ul.services-list li {
+            background: #ecf0f1;
+            margin-bottom: 15px;
+            padding: 18px 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(44,62,80,0.05);
+        }
+        ul.services-list li strong {
+            color: #2980b9;
+        }
+    

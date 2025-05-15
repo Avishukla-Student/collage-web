@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BCA Department - Student Information</title>
+    <link rel="stylesheet" href="/css/student-info.css">
+    <script>
+        function showYear(year) {
+            document.getElementById('year1').style.display = (year === '1') ? 'block' : 'none';
+            document.getElementById('year2').style.display = (year === '2') ? 'block' : 'none';
+            document.getElementById('year3').style.display = (year === '3') ? 'block' : 'none';
+        }
+        window.onload = function() {
+            showYear('1');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>BCA Department - Student Information</h1>
+        <p>Student details for 1st, 2nd, and 3rd year</p>
+    </header>
+    <div class="container">
+        <div class="year-options">
+            <label>
+                <input type="radio" name="year" value="1" checked onclick="showYear('1')"> 1st Year
+            </label>
+            <label>
+                <input type="radio" name="year" value="2" onclick="showYear('2')"> 2nd Year
+            </label>
+            <label>
+                <input type="radio" name="year" value="3" onclick="showYear('3')"> 3rd Year
+            </label>
+        </div>
+
+        <div id="year1">
+            <h2 class="year-title">1st Year Students</h2>
+            <table>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>Amit Sharma</td>
+                    <td>amit.sharma@example.com</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Priya Singh</td>
+                    <td>priya.singh@example.com</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Rahul Verma</td>
+                    <td>rahul.verma@example.com</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="year2" style="display:none;">
+            <h2 class="year-title">2nd Year Students</h2>
+            <table>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>Sneha Gupta</td>
+                    <td>sneha.gupta@example.com</td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>Vikas Kumar</td>
+                    <td>vikas.kumar@example.com</td>
+                </tr>
+                <tr>
+                    <td>203</td>
+                    <td>Neha Yadav</td>
+                    <td>neha.yadav@example.com</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="year3" style="display:none;">
+            <h2 class="year-title">3rd Year Students</h2>
+            <table>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>301</td>
+                    <td>Rohit Saini</td>
+                    <td>rohit.saini@example.com</td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>Megha Jain</td>
+                    <td>megha.jain@example.com</td>
+                </tr>
+                <tr>
+                    <td>303</td>
+                    <td>Deepak Mishra</td>
+                    <td>deepak.mishra@example.com</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
