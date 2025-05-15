@@ -45,3 +45,18 @@ function toggleMenu() {
   const navLinks = document.querySelector('.nav-links');
   navLinks.classList.toggle('active');
 }
+
+const login=document.querySelector(".logind");
+const dropdown=document.querySelector(".dropdown");
+
+let clickcount=0;
+
+login.addEventListener("click",()=>{
+  if(clickcount==0){
+    dropdown.style.display = "block";    
+    clickcount=1;
+  }else{
+    dropdown.style.display = "none";
+    clickcount=0;
+  }
+})
