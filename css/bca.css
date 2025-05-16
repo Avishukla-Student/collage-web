@@ -1,129 +1,97 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f9f9f9;
-  }
-  
-  .container {
-    position: relative;
-    width: 100%;
-    height: 40rem;
-    max-width: 900px;
-    margin: 40px auto;
-    text-align: center;
-  }
-  
-  .center-circle {
-    width: 260px;
-    height: 260px;
-    background: #444;
-    color: #fff;
-    border-radius: 50%;
-    margin: 0 auto;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    margin: 12rem 0 0 20rem;
-    position: absolute;
-    
-  }
-  
-  .center-circle h1 {
-    margin-top: 10px;
-    font-size: 2.5rem;
-    color: #f1c40f;
-  }
-  
-  .center-circle h3 {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-  
-  .box {
-    position: absolute;
-    width: 220px;
-    background: #fff;
-    border: 2px dashed #ccc;
-    padding: 15px;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 0.9rem;
-  }
-  
-  .box h4 {
-    margin-top: 0;
-  }
-  
-  .box ul {
-    padding-left: 20px;
-    margin: 5px 0 0 0;
-  }
-  
-  .entrance {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #6d7337;
-    color: white;
-    border: none;
-  }
-  
-  .entrance ul {
-    color: #000;
-    background: #fff;
-    margin-top: 10px;
-    padding: 10px;
-    border: 2px dashed #bbb;
-  }
-  
-  .job-profiles {
-    top: 160px;
-    left: 0;
-    background-color: #2980b9;
-    color: #fff;
-    border: none;
-  }
-  
-  .job-profiles ul {
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    border: 2px dashed #bbb;
-    margin-top: 10px;
-  }
-  
-  .employment {
-    top: 160px;
-    right: 0;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-  }
-  
-  .employment ul {
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    border: 2px dashed #bbb;
-    margin-top: 10px;
-  }
-  
-  .programming {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #b58b3f;
-    color: white;
-    border: none;
-  }
-  
-  .programming ul {
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    border: 2px dashed #bbb;
-    margin-top: 10px;
-  }
-  
-  
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+  color: #003366;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #003366;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #2a56c6;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1e40af;
+}
+
+.objectives {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.objectives li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.objectives li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #e53935;
+  font-size: 12px;
+  top: 1px;
+}
+
+h2 {
+  color: #003366;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 5px 10px;
+  border: 1px solid #999;
+  text-align: left;
+  font-size: 14px;
+}
+
+.head {
+  background-color: #1e40af;
+  color: white;
+  font-size: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
