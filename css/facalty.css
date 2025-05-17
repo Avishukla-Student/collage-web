@@ -1,7 +1,16 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7fbdc;
-    margin: 20px;
+    
+    /* margin: 20px; */
+  }
+
+  .part{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .title {
@@ -10,12 +19,15 @@ body {
     font-size: 22px;
     border-left: 5px solid orange;
     padding-left: 10px;
+    width: 80%;
+
   }
   
   .faculty-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    width: 80%;
   }
   
   .faculty-table thead {
