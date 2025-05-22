@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Access - Student Services</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; }
+        .container { max-width: 750px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 36px 32px 28px 32px; }
+        h1 { color: #2980b9; margin-bottom: 10px; }
+        h2 { color: #1abc9c; margin-top: 30px; }
+        p { font-size: 1.1em; }
+        a { color: #2980b9; text-decoration: none; }
+        ul { margin: 12px 0 24px 20px; }
+        .library-hours, .library-contact {
+            background: #ecf0f1;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+        .search-section {
+            margin: 28px 0 18px 0;
+            padding: 18px 20px;
+            background: #f9f9fb;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(44,62,80,0.05);
+        }
+        .search-section input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #b2bec3;
+            border-radius: 4px;
+            width: 220px;
+            font-size: 1em;
+        }
+        .search-section button {
+            padding: 8px 18px;
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-left: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-section button:hover {
+            background: #1abc9c;
+        }
+        .search-result {
+            margin-top: 14px;
+            color: #16a085;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 14px 4px 12px 4px; }
+            .search-section input[type="text"] { width: 120px; }
+        }
+    </style>
+    <script>
+        function searchBook() {
+            const query = document.getElementById('bookSearch').value.trim().toLowerCase();
+            const result = document.getElementById('searchResult');
+            if (!query) {
+                result.textContent = "Please enter a book title or author.";
+                return false;
+            }
+            // Example static search (replace with real search in production)
+            const books = [
+                "Introduction to Algorithms",
+                "Database Management Systems",
+                "Operating System Concepts",
+                "Artificial Intelligence: A Modern Approach",
+                "Let Us C",
+                "Digital Logic Design"
+            ];
+            const found = books.find(b => b.toLowerCase().includes(query));
+            if (found) {
+                result.textContent = `Book found: "${found}" is available in the library.`;
+            } else {
+                result.textContent = "Book not found in the library database.";
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Library Access</h1>
+        <p>
+            Welcome to the college library! Our library provides a wide range of academic resources including books, journals, e-books, and digital databases. Students can borrow materials, use reading rooms, and access computers for research and study.
+        </p>
+        <div class="library-hours">
+            <strong>Library Hours:</strong>
+            <ul>
+                <li>Monday - Friday: 8:00 AM to 7:00 PM</li>
+                <li>Saturday: 9:00 AM to 2:00 PM</li>
+                <li>Sunday & Holidays: Closed</li>
+            </ul>
+        </div>
+        <div class="library-contact">
+            <strong>Contact:</strong>
+            <ul>
+                <li>Email: <a href="mailto:library@college.edu">library@college.edu</a></li>
+                <li>Phone: +91-12345-67890</li>
+                <li>Librarian: Mr. Shri Prakash Dabral</li>
+            </ul>
+        </div>
+        <h2>Facilities & Services</h2>
+        <ul>
+            <li>Book lending and return counter</li>
+            <li>Reference section for research</li>
+            <li>Digital library and e-resources</li>
+            <li>Reading rooms and study spaces</li>
+            <li>Computer and internet access</li>
+            <li>Photocopy and printing services</li>
+        </ul>
+        <div class="search-section">
+            <strong>Search for a Book:</strong><br>
+            <form onsubmit="return searchBook();">
+                <input type="text" id="bookSearch" placeholder="Enter book title or author">
+                <button type="submit">Search</button>
+            </form>
+            <div id="searchResult" class="search-result"></div>
+        </div>
+        <a href="student-services.html">&larr; Back to Student Services</a>
+    </div>
+</body>
+</html>

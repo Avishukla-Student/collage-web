@@ -3,7 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>BCA Department - Student Information</title>
-    <link rel="stylesheet" href="/css/student-info.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #ecf0f1;
+        }
+        .year-title {
+            margin-top: 40px;
+            color: #16a085;
+        }
+        .year-options {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .year-options label {
+            margin: 0 15px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .profile-link {
+            padding: 6px 12px;
+            background: #2980b9;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .profile-link:hover {
+            background: #1abc9c;
+        }
+    </style>
     <script>
         function showYear(year) {
             document.getElementById('year1').style.display = (year === '1') ? 'block' : 'none';
@@ -40,21 +105,25 @@
                     <th>Roll No</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Profile</th>
                 </tr>
                 <tr>
                     <td>101</td>
                     <td>Amit Sharma</td>
                     <td>amit.sharma@example.com</td>
+                    <td><a href="student-profile.html?roll=101" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>102</td>
                     <td>Priya Singh</td>
                     <td>priya.singh@example.com</td>
+                    <td><a href="student-profile.html?roll=102" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>103</td>
                     <td>Rahul Verma</td>
                     <td>rahul.verma@example.com</td>
+                    <td><a href="student-profile.html?roll=103" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
             </table>
         </div>
@@ -66,21 +135,25 @@
                     <th>Roll No</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Profile</th>
                 </tr>
                 <tr>
                     <td>201</td>
                     <td>Sneha Gupta</td>
                     <td>sneha.gupta@example.com</td>
+                    <td><a href="student-profile.html?roll=201" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>202</td>
                     <td>Vikas Kumar</td>
                     <td>vikas.kumar@example.com</td>
+                    <td><a href="student-profile.html?roll=202" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>203</td>
                     <td>Neha Yadav</td>
                     <td>neha.yadav@example.com</td>
+                    <td><a href="student-profile.html?roll=203" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
             </table>
         </div>
@@ -92,21 +165,25 @@
                     <th>Roll No</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Profile</th>
                 </tr>
                 <tr>
                     <td>301</td>
                     <td>Rohit Saini</td>
                     <td>rohit.saini@example.com</td>
+                    <td><a href="student-profile.html?roll=301" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>302</td>
                     <td>Megha Jain</td>
                     <td>megha.jain@example.com</td>
+                    <td><a href="student-profile.html?roll=302" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
                 <tr>
                     <td>303</td>
                     <td>Deepak Mishra</td>
                     <td>deepak.mishra@example.com</td>
+                    <td><a href="student-profile.html?roll=303" target="_blank" class="profile-link">View Profile</a></td>
                 </tr>
             </table>
         </div>

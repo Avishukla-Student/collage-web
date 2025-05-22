@@ -3,92 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Profile</title>
-    <link rel="stylesheet" href="/css/student-profile.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; padding: 0; }
+        .profile-container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 30px; }
+        .profile-header { display: flex; align-items: center; border-bottom: 1px solid #ecf0f1; padding-bottom: 20px; margin-bottom: 30px; }
+        .profile-photo { width: 110px; height: 110px; border-radius: 50%; background: #ecf0f1; margin-right: 30px; object-fit: cover; border: 2px solid #2980b9; }
+        .profile-info h2 { margin: 0 0 10px 0; color: #2980b9; }
+        .profile-info p { margin: 4px 0; color: #34495e; }
+    </style>
+    <script>
+        const students = {
+            "101": { name: "Amit Sharma", roll: "101", course: "BCA", year: "1st Year", email: "amit.sharma@example.com", phone: "+91-9876543210" },
+            "102": { name: "Priya Singh", roll: "102", course: "BCA", year: "1st Year", email: "priya.singh@example.com", phone: "+91-9876543211" },
+            "103": { name: "Rahul Verma", roll: "103", course: "BCA", year: "1st Year", email: "rahul.verma@example.com", phone: "+91-9876543212" },
+            "201": { name: "Sneha Gupta", roll: "201", course: "BCA", year: "2nd Year", email: "sneha.gupta@example.com", phone: "+91-9876543220" },
+            "202": { name: "Vikas Kumar", roll: "202", course: "BCA", year: "2nd Year", email: "vikas.kumar@example.com", phone: "+91-9876543221" },
+            "203": { name: "Neha Yadav", roll: "203", course: "BCA", year: "2nd Year", email: "neha.yadav@example.com", phone: "+91-9876543222" },
+            "301": { name: "Rohit Saini", roll: "301", course: "BCA", year: "3rd Year", email: "rohit.saini@example.com", phone: "+91-9876543230" },
+            "302": { name: "Megha Jain", roll: "302", course: "BCA", year: "3rd Year", email: "megha.jain@example.com", phone: "+91-9876543231" },
+            "303": { name: "Deepak Mishra", roll: "303", course: "BCA", year: "3rd Year", email: "deepak.mishra@example.com", phone: "+91-9876543232" }
+        };
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const roll = params.get('roll');
+            const student = students[roll];
+            if (!student) {
+                document.getElementById('profile').innerHTML = "<h2>Student not found.</h2>";
+                return;
+            }
+            document.getElementById('student-name').textContent = student.name;
+            document.getElementById('student-roll').textContent = student.roll;
+            document.getElementById('student-course').textContent = student.course;
+            document.getElementById('student-year').textContent = student.year;
+            document.getElementById('student-email').textContent = student.email;
+            document.getElementById('student-phone').textContent = student.phone;
+        };
+    </script>
 </head>
 <body>
-    <div class="profile-container">
+    <div class="profile-container" id="profile">
         <div class="profile-header">
-            <img src="student-photo.jpg" alt="Student Photo" class="profile-photo">
             <div class="profile-info">
-                <h2>Om Kumar</h2>
-                <p><strong>Roll No:</strong> 23003506567</p>
-                <p><strong>Course:</strong> BCA</p>
-                <p><strong>Year:</strong> 3rd Year</p>
-                <p><strong>Email:</strong> Omkumar@gmail.com</p>
-                <p><strong>Phone:</strong> +91-9876543210</p>
+                <h2 id="student-name"></h2>
+                <p><strong>Roll No:</strong> <span id="student-roll"></span></p>
+                <p><strong>Course:</strong> <span id="student-course"></span></p>
+                <p><strong>Year:</strong> <span id="student-year"></span></p>
+                <p><strong>Email:</strong> <span id="student-email"></span></p>
+                <p><strong>Phone:</strong> <span id="student-phone"></span></p>
             </div>
         </div>
-
-        <div>
-            <div class="section-title">Personal Details</div>
-            <table>
-                <tr>
-                    <th>Date of Birth</th>
-                    <td>2005</td>
-                </tr>
-                <tr>
-                    <th>Gender</th>
-                    <td>Male</td>
-                </tr>
-                <tr>
-                    <th>Address</th>
-                    <td>Shahjahanpur,Uttar Pradesh</td>
-                </tr>
-            </table>
-        </div>
-
-        <div>
-            <div class="section-title">Academic Details</div>
-            <table>
-                <tr>
-                    <th>Semester</th>
-                    <th>Total Marks</th>
-                    <th>Obtained Marks</th>
-                    <th>Percentage</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>600</td>
-                    <td>492</td>
-                    <td>82%</td>
-                    <td>Pass</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>600</td>
-                    <td>510</td>
-                    <td>85%</td>
-                    <td>Pass</td>
-                </tr>
-            </table>
-        </div>
-
-        <div>
-            <div class="section-title">Attendance</div>
-            <table>
-                <tr>
-                    <th>Semester</th>
-                    <th>Attendance (%)</th>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>92%</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>95%</td>
-                </tr>
-            </table>
-        </div>
-
-        <div>
-            <div class="section-title">Achievements</div>
-            <ul>
-                <li>Winner, Coding Competition 2024</li>
-                <li>Member, College Cricket Team</li>
-            </ul>
-        </div>
+        <a href="student-info.html">&larr; Back to Student Info</a>
     </div>
 </body>
 </html>

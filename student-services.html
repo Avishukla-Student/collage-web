@@ -3,53 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Services</title>
-   <link rel="stylesheet" href="/css/student-service.css">
+    <link rel="stylesheet" href="/css/student-service.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(90deg, #2980b9 60%, #6dd5fa 100%);
+            color: #fff;
+            padding: 32px 0 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+            padding: 36px 32px 28px 32px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 1.7em;
+            letter-spacing: 1px;
+        }
+        ul.services-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul.services-list li {
+            background: linear-gradient(90deg, #ecf0f1 80%, #d6eaf8 100%);
+            margin-bottom: 18px;
+            padding: 20px 22px 18px 22px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.08em;
+        }
+        ul.services-list li strong {
+            color: #1abc9c;
+            min-width: 170px;
+            display: inline-block;
+        }
+        ul.services-list li:last-child {
+            margin-bottom: 0;
+        }
+        /* Style for TC form */
+        .tc-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .tc-form input[type="text"] {
+            padding: 7px 10px;
+            border: 1px solid #b2bec3;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 140px;
+            transition: border 0.2s;
+        }
+        .tc-form input[type="text"]:focus {
+            border: 1.5px solid #2980b9;
+            outline: none;
+        }
+        .tc-form button {
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .tc-form button:hover {
+            background: #1abc9c;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 6px 16px 6px;
+            }
+            ul.services-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1em;
+            }
+            .tc-form input[type="text"] {
+                width: 100px;
+            }
+        }
+    </style>
+     
 </head>
 <body>
+    <!-- Attach the navbar at the very top -->
+    <div id="navbar-container"></div>
+    <script>
+        // Dynamically load navbar.html into the navbar-container
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
     <header>
         <h1>Student Services</h1>
-        <p>All the support and facilities available for students in our college</p>
+        <p style="font-size:1.15em; margin-top:8px;">All the support and facilities available for students in our college</p>
     </header>
     <div class="container">
         <h2>Available Services</h2>
         <ul class="services-list">
             <li>
-                <strong>Library Access:</strong> Borrow books, journals, and access digital resources.
+                <strong><a href="library.html" style="color:#1abc9c;">Library Access:</a></strong> Borrow books, journals, and access digital resources.
             </li>
             <li>
-                <strong>Hostel Accommodation:</strong> On-campus housing for students with mess facilities.
+                <strong><a href="sports.html" style="color:#1abc9c;">Sports & Recreation:</a></strong> Facilities for indoor and outdoor games, gym, and fitness programs.
             </li>
             <li>
-                <strong>Career Guidance & Placement Cell:</strong> Career counseling, resume workshops, and campus placements.
+                <strong><a href="medical.html" style="color:#1abc9c;">Medical Services:</a></strong> On-campus health center and emergency medical support.
             </li>
             <li>
-                <strong>Sports & Recreation:</strong> Facilities for indoor and outdoor games, gym, and fitness programs.
+                <strong><a href="wifi.html" style="color:#1abc9c;">Wi-Fi & Computer Labs:</a></strong> High-speed internet and modern computer labs for academic use.
             </li>
             <li>
-                <strong>Medical Services:</strong> On-campus health center and emergency medical support.
+                <strong><a href="counseling.html" style="color:#1abc9c;">Student Counseling:</a></strong> Personal and academic counseling services.
             </li>
             <li>
-                <strong>Wi-Fi & Computer Labs:</strong> High-speed internet and modern computer labs for academic use.
+                <strong><a href="clubs.html" style="color:#1abc9c;">Clubs & Societies:</a></strong> Various student-run clubs for arts, technology, culture, and more.
             </li>
             <li>
-                <strong>Student Counseling:</strong> Personal and academic counseling services.
+                <strong><a href="scholarships.html" style="color:#1abc9c;">Scholarships & Financial Aid:</a></strong> Assistance for eligible students.
             </li>
             <li>
-                <strong>Clubs & Societies:</strong> Various student-run clubs for arts, technology, culture, and more.
-            </li>
-            <li>
-                <strong>Transport Services:</strong> College buses for daily commuting.
-            </li>
-            <li>
-                <strong>Scholarships & Financial Aid:</strong> Assistance for eligible students.
-            </li>
-            <li>
-                <strong>Apply for TC (Transfer Certificate):</strong>
-                <form style="display:inline;" action="#" method="post" onsubmit="alert('TC application submitted!'); return false;">
-                    <input type="text" name="studentName" placeholder="Your Name" required>
-                    <input type="text" name="rollNo" placeholder="Roll No" required>
-                    <button type="submit">Apply</button>
-                </form>
+                <strong><a href="tc-apply.html" style="color:#1abc9c;">Apply for TC (Transfer Certificate):</a></strong>
             </li>
         </ul>
     </div>
