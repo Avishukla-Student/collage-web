@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Student Services</title>
     <link rel="stylesheet" href="/css/student-service.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -107,17 +109,7 @@
      
 </head>
 <body>
-    <!-- Attach the navbar at the very top -->
-    <div id="navbar-container"></div>
-    <script>
-        // Dynamically load navbar.html into the navbar-container
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-container').innerHTML = data;
-            });
-    </script>
-
+    <div id="nav-container"></div>
     <header>
         <h1>Student Services</h1>
         <p style="font-size:1.15em; margin-top:8px;">All the support and facilities available for students in our college</p>
@@ -151,5 +143,8 @@
             </li>
         </ul>
     </div>
+    <div id="footer-container"></div>
+    <script src="javascript/nav.js"></script>
+    <script src="javascript/footer.js"></script>
 </body>
 </html>
