@@ -66,14 +66,16 @@ body {
 }
 
 #user-info-container #logout-text {
-  font-size: 20px;
-  color: black;
-  font-weight: 800;
+  font-size: 15px;
+  color: cyan;
+  font-weight: 600;
   position: absolute;
-  margin-top: 4rem;
-  /* background-color: black; */
+  margin-top: 5rem;
+  background-color: black;
   padding: 8px;
-   display: none;
+  display: none;
+  cursor: pointer;
+  border-radius: 2rem;
 }
 
 .dropdown {

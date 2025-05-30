@@ -1,67 +1,125 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7fbdc;
-    
-    /* margin: 20px; */
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f7fbdc;
 
-  .part{
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .title {
-    color: #000;
-    font-weight: bold;
-    font-size: 22px;
-    border-left: 5px solid orange;
-    padding-left: 10px;
-    width: 80%;
+  /* margin: 20px; */
+}
 
-  }
-  
+.part {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #000;
+  font-weight: bold;
+  font-size: 22px;
+  border-left: 5px solid orange;
+  padding-left: 10px;
+  width: 80%;
+}
+
+.faculty-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.faculty-table thead {
+  background-color: #1d3fd6;
+  color: white;
+}
+
+.faculty-table th,
+.faculty-table td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.profile-img {
+  width: 80px;
+  height: auto;
+  border: 2px solid #000;
+}
+
+.row-pink {
+  background-color: #ffe3f3;
+}
+
+.row-blue {
+  background-color: #e5f0ff;
+}
+
+.profile-link {
+  color: #f37021;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Table Styles */
+@media (max-width: 900px) {
   .faculty-table {
+    font-size: 14px;
+  }
+  .faculty-table th,
+  .faculty-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faculty-table,
+  .faculty-table thead,
+  .faculty-table tbody,
+  .faculty-table th,
+  .faculty-table td,
+  .faculty-table tr {
+    display: block;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    width: 80%;
   }
-  
   .faculty-table thead {
-    background-color: #1d3fd6;
-    color: white;
+    display: none;
   }
-  
-  .faculty-table th, .faculty-table td {
-    padding: 12px;
-    text-align: left;
-    vertical-align: top;
+  .faculty-table tr {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    background: #fff;
+    box-shadow: 0 2px 8px #eee;
+    border-radius: 8px;
+    padding: 10px 0;
   }
-  
-  .profile-img {
-    width: 80px;
-    height: auto;
-    border: 2px solid #000;
+  .faculty-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    min-height: 40px;
+    border: none;
+    border-bottom: 1px solid #eee;
   }
-  
-  .row-pink {
-    background-color: #ffe3f3;
-  }
-  
-  .row-blue {
-    background-color: #e5f0ff;
-  }
-  
-  .profile-link {
-    color: #f37021;
+  .faculty-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 45%;
+    white-space: nowrap;
     font-weight: bold;
-    text-decoration: none;
+    text-align: left;
+    color: #333;
   }
-  
-  .profile-link:hover {
-    text-decoration: underline;
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
   }
-  
+}
