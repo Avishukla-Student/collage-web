@@ -1,4 +1,3 @@
-
 // let slideIndex = 0;
 // showSlides();
 
@@ -42,10 +41,62 @@ function toggleDetails(button) {
 // }
 
 function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
+  const navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle("active");
 }
 
-const login=document.querySelector(".logind");
-const dropdown=document.querySelector(".dropdown");
+const login = document.querySelector(".logind");
+const dropdown = document.querySelector(".dropdown");
 
+// Show user info if logged in
+const userFullName = localStorage.getItem("userFullName");
+const userInfoContainer = document.getElementById("user-info-container");
+const userNameElem = document.getElementById("user-name");
+const loginLink = document.getElementById("login-link");
+const logoutText = document.getElementById("logout-text");
+
+if (
+  userFullName &&
+  userInfoContainer &&
+  userNameElem &&
+  loginLink &&
+  logoutText
+) {
+  userInfoContainer.style.display = "flex";
+  userNameElem.textContent = userFullName;
+  loginLink.style.display = "none";
+
+  userNameElem.addEventListener("click", function (e) {
+    e.stopPropagation();
+    logoutText.style.display =
+      logoutText.style.display === "inline" ? "none" : "inline";
+  });
+
+  logoutText.addEventListener("click", function (e) {
+    e.stopPropagation();
+    localStorage.removeItem("userFullName");
+    userInfoContainer.style.display = "none";
+    loginLink.style.display = "inline";
+    logoutText.style.display = "none";
+    window.location.reload();
+  });
+
+  // Hide logout text when clicking outside
+  document.addEventListener("click", function () {
+    logoutText.style.display = "none";
+  });
+}
+
+// Require login before navigation
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  // Skip the login link
+  if (link.getAttribute("href") === "login.html") return;
+
+  link.addEventListener("click", function (e) {
+    const userFullName = localStorage.getItem("userFullName");
+    if (!userFullName) {
+      e.preventDefault();
+      alert("Please login first to access this page.");
+    }
+  });
+}); 

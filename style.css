@@ -51,6 +51,31 @@ body {
   color: #00bcd4;
 }
 
+.nav-links #user-info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#user-info-container #user-name {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#user-info-container #logout-text {
+  font-size: 20px;
+  color: black;
+  font-weight: 800;
+  position: absolute;
+  margin-top: 4rem;
+  /* background-color: black; */
+  padding: 8px;
+   display: none;
+}
+
 .dropdown {
   height: 4rem;
   width: 7rem;

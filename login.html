@@ -67,11 +67,9 @@
   <body>
     <div class="registration-container">
       <h2>Login Form</h2>
-      <form>
-        <input type="text" placeholder="Full Name" required />
-
-        <input type="password" placeholder="Password" required />
-
+      <form id="loginForm">
+        <input type="text" name="fullName" placeholder="Full Name" required />
+        <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Login</button>
       </form>
       <p style="text-align: center; margin-top: 15px">
@@ -86,5 +84,6 @@
         >
       </p>
     </div>
+    <script src="javascript/login.js"></script>
   </body>
 </html>
