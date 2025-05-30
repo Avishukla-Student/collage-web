@@ -87,17 +87,13 @@ if (
   });
 }
 
-// Require login before navigation
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  // Skip the login link (handles variations like ./login.html or /login.html)
-  const href = link.getAttribute("href") || "";
-  if (href.toLowerCase().includes("login.html")) return;
-
-  link.addEventListener("click", function (e) {
-    const userFullName = localStorage.getItem("userFullName");
-    if (!userFullName) {
-      e.preventDefault();
-      alert("Please login first to access this page.");
-    }
-  });
+window.addEventListener("scroll", function () {
+  const userFullName = localStorage.getItem("userFullName");
+  if (!userFullName) {
+    alert("Please login first to access this page.");
+    // Optionally, redirect to login page:
+    // window.location.href = "login.html";
+    // Remove the event listener after first alert to avoid multiple popups
+    window.removeEventListener("scroll", arguments.callee);
+  }
 });
