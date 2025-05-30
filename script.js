@@ -89,8 +89,9 @@ if (
 
 // Require login before navigation
 document.querySelectorAll(".nav-links a").forEach((link) => {
-  // Skip the login link
-  if (link.getAttribute("href") === "login.html") return;
+  // Skip the login link (handles variations like ./login.html or /login.html)
+  const href = link.getAttribute("href") || "";
+  if (href.toLowerCase().includes("login.html")) return;
 
   link.addEventListener("click", function (e) {
     const userFullName = localStorage.getItem("userFullName");
@@ -99,4 +100,4 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
       alert("Please login first to access this page.");
     }
   });
-}); 
+});
