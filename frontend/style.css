@@ -620,6 +620,25 @@ body {
   .faculty-section {
     margin-top: 20px; /* Adds spacing between the sections */
   }
+
+  .footer-container p {
+    margin: 5px 0;
+    font-size: 10px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+  }
+  
+  .contact-section{
+    margin: 10px;
+  }
+
+  .course-card {
+    width: 100%; /* Makes cards full width on smaller screens */
+    margin-bottom: 20px; /* Adds space between cards */
+  }
+  
 }
 
 .notice-board-section,
