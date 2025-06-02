@@ -7,140 +7,190 @@
     <link rel="stylesheet" href="css/facalty.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .part {
+        max-width: 1100px;
+        margin: 3rem auto 2rem auto;
+        background: rgba(255,255,255,0.97);
+        border-radius: 18px 18px 0 0; /* Only top corners rounded */
+        box-shadow: 0 8px 32px rgba(33, 150, 243, 0.13);
+        padding: 2rem 1rem 2.5rem 1rem;
+      }
+      .title {
+        text-align: center;
+        color: #2196f3;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .faculty-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: transparent;
+        font-size: 1rem;
+        margin: 0 auto;
+        box-shadow: 0 2px 12px rgba(33, 150, 243, 0.07);
+      }
+      .faculty-table th, .faculty-table td {
+        padding: 1rem 0.7rem;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .faculty-table th {
+        background: #2196f3;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .faculty-table tr:nth-child(even) {
+        background: #f4faff;
+      }
+      .faculty-table tr:nth-child(odd) {
+        background: #eaf6fb;
+      }
+      .profile-img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #2196f3;
+        box-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
+      }
+      @media (max-width: 900px) {
+        .part {
+          max-width: 98vw;
+          padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+        }
+        .title {
+          font-size: 1.4rem;
+        }
+      }
+      @media (max-width: 700px) {
+        .faculty-table th, .faculty-table td {
+          padding: 0.7rem 0.2rem;
+          font-size: 0.97rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .part {
+          margin: 1rem 0 1rem 0;
+          padding: 1rem 0.1rem 1.2rem 0.1rem;
+        }
+        .faculty-table, .faculty-table thead, .faculty-table tbody, .faculty-table tr, .faculty-table th, .faculty-table td {
+          display: block;
+        }
+        .faculty-table thead {
+          display: none;
+        }
+        .faculty-table tr {
+          margin-bottom: 1.5rem;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
+          background: #fff;
+        }
+        .faculty-table td {
+          text-align: left;
+          padding: 0.7rem 1rem;
+          position: relative;
+          border-bottom: none;
+          border-radius: 0;
+        }
+        .faculty-table td:before {
+          content: attr(data-label) ": ";
+          font-weight: 600;
+          color: #2196f3;
+          display: inline-block;
+          width: 120px;
+        }
+        .profile-img {
+          margin-bottom: 0.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="nav-container"></div>
     <script src="javascript/nav.js"></script>
     <div class="part">
-      <h2 class="title">Faculty of Computer Science Departement</h2>
-
+      <h2 class="title">Faculty of Computer Science Department</h2>
       <table class="faculty-table">
         <thead>
           <tr>
             <th>Image</th>
             <th>Name</th>
             <th>Designation</th>
-            <th>Specialization</th>
+            <th>Qualification</th> <!-- Changed from Specialization -->
             <th>Email-ID</th>
-            <th>Download</th>
+            <th>Phone Number</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="row-pink">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/Sandeep Kumar Awasthi.jpg"
-                alt="Sandeep Kumar Awasthi"
-                class="profile-img" />
+              <img src="asset/facaltyimages/Sandeep Kumar Awasthi.jpg" alt="Sandeep Kumar Awasthi" class="profile-img" />
             </td>
-            <td data-label="Name">
-              <strong>Mr. Sandeep Kumar Awasthi</strong>
-            </td>
-            <td data-label="Designation">PROFESSOR & HEAD</td>
-            <td data-label="Specialization">
-              Wireless Sensor Networks, IoT and Machine Learning
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:vrishiwal@mjpru.ac.in">vrishiwal@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Name"><strong>Mr. Sandeep Kumar Awasthi</strong></td>
+            <td data-label="Designation">ASST. PROFESSOR & HEAD</td>
+            <td data-label="Qualification">MCA</td> <!-- Changed label -->
+            <td data-label="Email-ID"><a href="mailto:vrishiwal@mjpru.ac.in">sndp67@rediffmail.com</a></td>
+            <td data-label="Phone Number">+91-9450425772</td>
           </tr>
-          <tr class="row-blue">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/Rajat .jpg"
-                alt="Rajat Singh"
-                class="profile-img" />
+              <img src="asset/facaltyimages/Rajat .jpg" alt="Rajat Singh" class="profile-img" />
             </td>
             <td data-label="Name"><strong>Mr. Rajat Singh</strong></td>
-            <td data-label="Designation">PROFESSOR</td>
-            <td data-label="Specialization">
-              Machine Learning and Applications
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:r.singh@mjpru.ac.in">r.singh@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Designation">ASST. PROFESSOR</td>
+            <td data-label="Qualification">MCA</td>
+            <td data-label="Email-ID"><a href="mailto:r.singh@mjpru.ac.in">ssrajatsingh@gmail.com</a></td>
+            <td data-label="Phone Number">+91-9452886101</td>
           </tr>
-          <tr class="row-pink">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/Umesh Singh Visen.jpeg"
-                alt="Umesh Singh Visen"
-                class="profile-img" />
+              <img src="asset/facaltyimages/Umesh Singh Visen.jpeg" alt="Umesh Singh Visen" class="profile-img" />
             </td>
             <td data-label="Name"><strong>Mr. Umesh Singh Visen</strong></td>
-            <td data-label="Designation">PROFESSOR</td>
-            <td data-label="Specialization">
-              Network/Information Management and Security
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:ssbedi@mjpru.ac.in">ssbedi@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Designation">ASST. PROFESSOR</td>
+            <td data-label="Qualification">M.C.A, M.Tech.</td>
+            <td data-label="Email-ID"><a href="mailto:ssbedi@mjpru.ac.in">usvvidya@gmail.com</a></td>
+            <td data-label="Phone Number">+91-9140082221</td>
           </tr>
-          <tr class="row-blue">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/rajesh saxena.jpg"
-                alt="Rajesh Saxena"
-                class="profile-img" />
+              <img src="asset/facaltyimages/rajesh saxena.jpg" alt="Rajesh Saxena" class="profile-img" />
             </td>
             <td data-label="Name"><strong>Mr. Rajesh Saxena</strong></td>
-            <td data-label="Designation">PROFESSOR</td>
-            <td data-label="Specialization">
-              Network/Information Management and Security
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:ssbedi@mjpru.ac.in">ssbedi@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Designation">ASST. PROFESSOR</td>
+            <td data-label="Qualification">M.B.A, M.C.A</td>
+            <td data-label="Email-ID"><a href="mailto:ssbedi@mjpru.ac.in">N/A</a></td>
+            <td data-label="Phone Number">+91-8953009456</td>
           </tr>
-          <tr class="row-pink">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/Sumit Trivedi.jpeg"
-                alt="Sumit Trivedi"
-                class="profile-img" />
+              <img src="asset/facaltyimages/Sumit Trivedi.jpeg" alt="Sumit Trivedi" class="profile-img" />
             </td>
             <td data-label="Name"><strong>Mr. Sumit Trivedi</strong></td>
-            <td data-label="Designation">PROFESSOR</td>
-            <td data-label="Specialization">
-              Network/Information Management and Security
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:ssbedi@mjpru.ac.in">ssbedi@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Designation">ASST. PROFESSOR</td>
+            <td data-label="Qualification">M.C.A, M.A</td>
+            <td data-label="Email-ID"><a href="mailto:ssbedi@mjpru.ac.in">N/A</a></td>
+            <td data-label="Phone Number">+91-6386934771</td>
           </tr>
-          <tr class="row-blue">
+          <tr>
             <td data-label="Image">
-              <img
-                src="asset/facaltyimages/Anamika Shukla.jpeg"
-                alt="Anamika Shukla"
-                class="profile-img" />
+              <img src="asset/facaltyimages/Anamika Shukla.jpeg" alt="Anamika Shukla" class="profile-img" />
             </td>
             <td data-label="Name"><strong>Mrs. Anamika Shukla</strong></td>
-            <td data-label="Designation">PROFESSOR</td>
-            <td data-label="Specialization">
-              Network/Information Management and Security
-            </td>
-            <td data-label="Email-ID">
-              <a href="mailto:ssbedi@mjpru.ac.in">ssbedi@mjpru.ac.in</a>
-            </td>
-            <td data-label="Download">
-              <a href="#" class="profile-link">Profile</a>
-            </td>
+            <td data-label="Designation">ASST. PROFESSOR</td>
+            <td data-label="Qualification">M. Tech. (EC)</td>
+            <td data-label="Email-ID"><a href="mailto:ssbedi@mjpru.ac.in">N/A</a></td>
+            <td data-label="Phone Number">+91-7651866310</td>
           </tr>
         </tbody>
       </table>

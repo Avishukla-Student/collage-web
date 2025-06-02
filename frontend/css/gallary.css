@@ -41,7 +41,6 @@ body {
   height: 19rem;
   gap: 20px;
   overflow-x: auto;
-  scrollbar-width: none;
   align-items: center;
 }
 
