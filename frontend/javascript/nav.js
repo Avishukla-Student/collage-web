@@ -1,26 +1,15 @@
-fetch("nav.html")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not OK");
-    }
-    return response.text();
-  })
-  .then((html) => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, "text/html");
-    const nav = doc.querySelector("nav");
-    if (nav) {
-      document.getElementById("nav-container").appendChild(nav);
-    } else {
-      console.error("No <nav> element found in nav.html");
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching nav:", error);
+fetch('nav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('nav-container').innerHTML = data;
+    // Attach toggleMenu globally after nav is loaded
+    window.toggleMenu = function() {
+      const navLinks = document.querySelector(".nav-links");
+      navLinks.classList.toggle("active");
+    };
   });
 
-function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("active");
-}
+let script = document.createElement('script');
+script.src = 'script.js';
+document.body.appendChild(script);
 

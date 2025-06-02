@@ -178,3 +178,30 @@ body {
   }
 }
 
+.nav-links #user-info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#user-info-container #user-name {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#user-info-container #logout-text {
+  font-size: 15px;
+  color: cyan;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 5rem;
+  background-color: black;
+  padding: 8px;
+  display: none;
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
