@@ -1,0 +1,8 @@
+const express = require("express");
+const router = express.Router();
+const tcController = require("../controllers/tcController");
+
+router.post("/", tcController.createTC);
+router.get("/", tcController.getTCs);
+
+module.exports = router;

@@ -16,6 +16,7 @@ window.addEventListener("scroll", function () {
     // Optionally, redirect to login page:
     // window.location.href = "login.html";
     // Remove the event listener after first alert to avoid multiple popups
+
     window.removeEventListener("scroll", arguments.callee);
   }
 });
