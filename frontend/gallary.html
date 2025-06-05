@@ -80,5 +80,27 @@
     <script src="javascript/nav.js"></script>
     <script src="javascript/footer.js"></script>
     <script src="script.js"></script>
+
+    <!-- Add this modal structure -->
+    <div id="imgModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+    <script>
+document.querySelectorAll('.gallery-grid img').forEach(img => {
+  img.onclick = function() {
+    document.getElementById('imgModal').style.display = "block";
+    document.getElementById('modalImg').src = this.src;
+  }
+});
+document.querySelector('.modal .close').onclick = function() {
+  document.getElementById('imgModal').style.display = "none";
+};
+window.onclick = function(event) {
+  if (event.target == document.getElementById('imgModal')) {
+    document.getElementById('imgModal').style.display = "none";
+  }
+};
+</script>
   </body>
 </html>

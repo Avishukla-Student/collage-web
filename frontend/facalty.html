@@ -7,115 +7,7 @@
     <link rel="stylesheet" href="css/facalty.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
-    <style>
-      body {
-        background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
-        font-family: 'Segoe UI', Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      .part {
-        max-width: 1100px;
-        margin: 3rem auto 2rem auto;
-        background: rgba(255,255,255,0.97);
-        border-radius: 18px 18px 0 0; /* Only top corners rounded */
-        box-shadow: 0 8px 32px rgba(33, 150, 243, 0.13);
-        padding: 2rem 1rem 2.5rem 1rem;
-      }
-      .title {
-        text-align: center;
-        color: #2196f3;
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-      }
-      .faculty-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: transparent;
-        font-size: 1rem;
-        margin: 0 auto;
-        box-shadow: 0 2px 12px rgba(33, 150, 243, 0.07);
-        border-radius: 18px; /* Add this for rounded corners */
-        overflow: hidden;    /* Ensures the rounding is visible */
-      }
-      .faculty-table th, .faculty-table td {
-        padding: 1rem 0.7rem;
-        text-align: center;
-        border-bottom: 1px solid #e0e0e0;
-      }
-      .faculty-table th {
-        background: #2196f3;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-      }
-      .faculty-table tr:nth-child(even) {
-        background: #f4faff;
-      }
-      .faculty-table tr:nth-child(odd) {
-        background: #eaf6fb;
-      }
-      .profile-img {
-        width: 60px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid #2196f3;
-        box-shadow: 0 2px 8px rgba(33, 150, 243, 0.13);
-      }
-      @media (max-width: 900px) {
-        .part {
-          max-width: 98vw;
-          padding: 1.2rem 0.5rem 1.5rem 0.5rem;
-        }
-        .title {
-          font-size: 1.4rem;
-        }
-      }
-      @media (max-width: 700px) {
-        .faculty-table th, .faculty-table td {
-          padding: 0.7rem 0.2rem;
-          font-size: 0.97rem;
-        }
-      }
-      @media (max-width: 600px) {
-        .part {
-          margin: 1rem 0 1rem 0;
-          padding: 1rem 0.1rem 1.2rem 0.1rem;
-        }
-        .faculty-table, .faculty-table thead, .faculty-table tbody, .faculty-table tr, .faculty-table th, .faculty-table td {
-          display: block;
-        }
-        .faculty-table thead {
-          display: none;
-        }
-        .faculty-table tr {
-          margin-bottom: 1.5rem;
-          border-radius: 10px;
-          box-shadow: 0 2px 8px rgba(33, 150, 243, 0.07);
-          background: #fff;
-        }
-        .faculty-table td {
-          text-align: left;
-          padding: 0.7rem 1rem;
-          position: relative;
-          border-bottom: none;
-          border-radius: 0;
-        }
-        .faculty-table td:before {
-          content: attr(data-label) ": ";
-          font-weight: 600;
-          color: #2196f3;
-          display: inline-block;
-          width: 120px;
-        }
-        .profile-img {
-          margin-bottom: 0.5rem;
-        }
-      }
-    </style>
+ 
   </head>
   <body>
     <div id="nav-container"></div>
@@ -128,7 +20,7 @@
             <th>Image</th>
             <th>Name</th>
             <th>Designation</th>
-            <th>Qualification</th> <!-- Changed from Specialization -->
+            <th>Qualification</th> 
             <th>Email-ID</th>
             <th>Phone Number</th>
           </tr>
