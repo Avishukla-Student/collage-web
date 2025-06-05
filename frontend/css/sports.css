@@ -1,0 +1,44 @@
+/* Style for the student service page */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        body { font-family: Arial, sans-serif; background: #f5f7fa; margin: 0; }
+        .container { max-width: 750px; margin: 40px auto; background: #fff; border-radius: 14px; box-shadow: 0 4px 16px rgba(44,62,80,0.10); padding: 38px 34px 30px 34px; }
+        h1 { color: #2980b9; margin-bottom: 10px; }
+        h2 { color: #1abc9c; margin-top: 32px; }
+        p { font-size: 1.13em; }
+        a { color: #2980b9; text-decoration: none; }
+        .sports-section {
+            background: #ecf0f1;
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+        }
+        ul.sports-list {
+            margin: 14px 0 18px 20px;
+            padding: 0;
+        }
+        ul.sports-list li {
+            margin-bottom: 8px;
+            font-size: 1.07em;
+        }
+        .gallery {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            border: 2px solid #d6eaf8;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 14px 4px 12px 4px; }
+            .gallery { gap: 8px; }
+            .gallery img { width: 100px; height: 70px; }
+        }
+    

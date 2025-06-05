@@ -56,3 +56,66 @@ body {
 .gallery-grid img:hover {
   transform: scale(1.2);
 }
+
+/* Modal styles */
+/* filepath: c:\Users\OM KUMAR\Desktop\collage-web\frontend\css\gallary.css */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gallery-grid img {
+    height: 10rem;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .close {
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+  }
+}
