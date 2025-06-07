@@ -251,12 +251,13 @@ body {
   font-size: 1.1rem;
   letter-spacing: 1.3px;
   line-height: 30px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.4); 
   backdrop-filter: blur(10px);
   width: 80%;
   border-radius: 5px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 2;
   
 }
 
@@ -266,6 +267,7 @@ body {
   font-size: 1.2rem;
   color: white;
   text-align: center;
+  z-index: 3;
 }
 .part1-info span{
   color: rgb(160, 14, 14);
