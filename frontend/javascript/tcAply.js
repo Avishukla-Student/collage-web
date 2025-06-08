@@ -5,11 +5,14 @@ document
     const studentName = this.studentName.value;
     const rollNo = this.rollNo.value;
 
-    const response = await fetch("http://localhost:5000/api/tcs", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ studentName, rollNo }),
-    });
+    const response = await fetch(
+      "https://collage-web-ifhm.onrender.com/api/tcs",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ studentName, rollNo }),
+      }
+    );
 
     if (response.ok) {
       alert("TC application submitted!");

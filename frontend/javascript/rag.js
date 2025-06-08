@@ -14,11 +14,14 @@ document
       return;
     }
 
-    const res = await fetch("http://localhost:5000/api/users/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ fullName, email, password, type }),
-    });
+    const res = await fetch(
+      "https://collage-web-ifhm.onrender.com/api/users/register",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName, email, password, type }),
+      }
+    );
 
     const data = await res.json();
     alert(data.message);

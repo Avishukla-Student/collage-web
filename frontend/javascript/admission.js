@@ -11,11 +11,14 @@ document.getElementById('admissionForm').addEventListener('submit', async functi
     address: form.address.value
   };
   try {
-    const response = await fetch('http://localhost:5000/api/admissions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
+    const response = await fetch(
+      "https://collage-web-ifhm.onrender.com/api/admissions",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
     const result = await response.json();
     if (response.ok) {
       alert('Admission form submitted successfully!');
